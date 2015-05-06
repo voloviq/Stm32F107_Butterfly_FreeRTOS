@@ -1,0 +1,1 @@
+openocd -f oocdlink.cfg -f stm32f1x.cfg -c init -c "script debug.script"

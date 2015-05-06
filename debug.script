@@ -1,0 +1,50 @@
+#Reset procedure
+
+reset halt
+sleep 100
+
+wait_halt
+sleep 100
+
+poll
+sleep 100
+
+flash probe 0
+sleep 100
+
+flash protect 0 0 63 off
+
+#stm32x options_read 0
+
+
+stm32f1x mass_erase 0
+
+sleep 100
+
+#flash protect_check 0
+
+#sleep 100
+
+flash info 0
+
+sleep 100
+
+#stm32x unlock 0
+
+sleep 100
+
+flash write_image Output/Kamami_Stm32_blinky.elf
+
+sleep 100
+
+
+
+#flash protect 0 0 63 on
+
+sleep 100
+
+
+
+
+
+
